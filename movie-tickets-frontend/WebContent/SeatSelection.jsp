@@ -1,13 +1,13 @@
-<%@page import="com.movietickets.model.BookedSeats"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 pageEncoding="UTF-8"%>
-<%@ page import="com.movietickets.RestClient"%>
-<%@ page import="com.movietickets.model.Movie"%>
-<%@ page import="com.movietickets.model.Schedule"%>
+<%@ page import="com.mtweb.RestClient"%>
+<%@ page import="com.mtweb.model.Movie"%>
+<%@ page import="com.mtweb.model.Schedule"%>
 <%@ page import="java.util.TimeZone"%>
 <%@ page import="java.text.SimpleDateFormat"%>
 <%@ page import="java.util.Date"%>
-<%@ page import="com.movietickets.model.Seat"%>
+<%@ page import="com.mtweb.model.Seat"%>
+<%@page import="com.mtweb.model.BookedSeats"%>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -253,7 +253,7 @@ function validateForm()
 
 <!-- Move rows, show 2 rows max for now. Each row has 5 movies. -->
 
-<form action="/TestWebApp/seatmap" method="post" id="seatForm">
+<form action="/movietickets/seatmap" method="post" id="seatForm">
 
 <center><h5>Movie: <% String movie = request.getParameter("movie");
 

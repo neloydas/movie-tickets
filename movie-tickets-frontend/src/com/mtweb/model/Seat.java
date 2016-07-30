@@ -1,4 +1,4 @@
-package com.movietickets.model;
+package com.mtweb.model;
 
 public class Seat {
 	

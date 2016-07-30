@@ -1,4 +1,4 @@
-package com.movietickets;
+package com.mtweb;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -14,10 +14,11 @@ import javax.ws.rs.core.Response;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.movietickets.model.BookedSeats;
-import com.movietickets.model.Movie;
-import com.movietickets.model.Schedule;
-import com.movietickets.model.Seat;
+
+import com.mtweb.model.BookedSeats;
+import com.mtweb.model.Movie;
+import com.mtweb.model.Schedule;
+import com.mtweb.model.Seat;
 
 
 public class RestClient {
@@ -27,7 +28,7 @@ public class RestClient {
 	public Movie[] getAllMovielist(){
 		Movie[] mov = new Movie[20];
 		client = ClientBuilder.newClient();
-		WebTarget webTarget = client.target("http://localhost:8080/ticketstore/movies");
+		WebTarget webTarget = client.target("http://localhost:8080/mtservice/movies/");
 		Invocation.Builder invocationBuilder = webTarget.request(MediaType.APPLICATION_JSON);
 		String json = invocationBuilder.get(String.class);
 		mapper = new ObjectMapper();
@@ -46,7 +47,7 @@ public class RestClient {
 	public Movie getSingleMovie(String imdbid){
 		Movie movie = new Movie();
 		client = ClientBuilder.newClient();
-		WebTarget webTarget = client.target("http://localhost:8080/ticketstore/movies/" + imdbid);
+		WebTarget webTarget = client.target("http://localhost:8080/mtservice/movies/" + imdbid);
 		Invocation.Builder invocationBuilder = webTarget.request(MediaType.APPLICATION_JSON);
 		String json = invocationBuilder.get(String.class);
 		mapper = new ObjectMapper();
@@ -65,7 +66,7 @@ public class RestClient {
 	public Schedule[] getMovieSchedule(String imdbid){
 		Schedule[] scheduleList = new Schedule[10];
 		client = ClientBuilder.newClient();
-		WebTarget webTarget = client.target("http://localhost:8080/ticketstore/schedules/" + imdbid);
+		WebTarget webTarget = client.target("http://localhost:8080/mtservice/schedules/" + imdbid);
 		Invocation.Builder invocationBuilder = webTarget.request(MediaType.APPLICATION_JSON);
 		String json = invocationBuilder.get(String.class);
 		mapper = new ObjectMapper();
@@ -102,7 +103,7 @@ public class RestClient {
 		bs.setSeats(list);
 		
 		Client client = ClientBuilder.newClient();
-		WebTarget webTarget = client.target("http://localhost:8080/ticketstore/screen/book?imdbid=" + imdbid + "&moviedate=" + time);
+		WebTarget webTarget = client.target("http://localhost:8080/mtservice/screen/book?imdbid=" + imdbid + "&moviedate=" + time);
 		
 		Invocation.Builder invocationBuilder =  webTarget.request(MediaType.TEXT_PLAIN);
 		Response response = invocationBuilder.put(Entity.entity(bs, MediaType.APPLICATION_JSON));
@@ -123,7 +124,7 @@ public class RestClient {
 		}
 		
 		client = ClientBuilder.newClient();
-		WebTarget webTarget = client.target("http://localhost:8080/ticketstore/screen/seats?imdbid=" + imdbid + "&moviedate=" + time);
+		WebTarget webTarget = client.target("http://localhost:8080/mtservice/screen/seats?imdbid=" + imdbid + "&moviedate=" + time);
 		Invocation.Builder invocationBuilder = webTarget.request(MediaType.APPLICATION_JSON);
 		String json = invocationBuilder.get(String.class);
 		mapper = new ObjectMapper();
