@@ -5,14 +5,14 @@
 	<artifactId>movie-tickets-frontend</artifactId>
 	<packaging>war</packaging>
 	<version>1.0</version>
-	<name>movie-tickets-frontend Maven Webapp</name>
+	<name>mtweb</name>
 	<url>http://maven.apache.org</url>
 
 <!--To upgrade it to Spring check here - https://www.mkyong.com/maven/how-to-create-a-web-application-project-with-maven/ -->
 
 	<build>
 		<sourceDirectory>src</sourceDirectory>
-		<finalName>movie-tickets-frontend</finalName>
+		<finalName>mtweb</finalName>
 		<plugins>
 			<plugin>
 				<artifactId>maven-war-plugin</artifactId>

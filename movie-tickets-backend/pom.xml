@@ -7,10 +7,10 @@
 	<artifactId>movie-tickets-backend</artifactId>
 	<packaging>war</packaging>
 	<version>1.0</version>
-	<name>movie-tickets-backend</name>
+	<name>mtservice</name>
 
 	<build>
-		<finalName>movie-tickets-backend</finalName>
+		<finalName>mtservice</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
