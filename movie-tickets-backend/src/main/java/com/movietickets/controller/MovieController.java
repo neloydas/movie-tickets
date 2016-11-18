@@ -63,7 +63,7 @@ public class MovieController {
 			return "false";
 	}
 
-	// edited by Girts for movie delete by movie object
+	
 	@DELETE
 	@Path("/delete/{imdbid}")
 	@Produces(MediaType.TEXT_PLAIN)
