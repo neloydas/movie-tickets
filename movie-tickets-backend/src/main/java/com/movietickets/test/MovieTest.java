@@ -72,7 +72,7 @@ public class MovieTest {
 		movie.setActors("actors");
 		movie.setDirector("director");
 		movie.setPoster("poster");
-		movie.setRuntime("30min");
+		movie.setRuntime("30");
 		movie.setYear(2015);
 		movie.setDefaultprice(1.5d);
 		boolean status = true;
@@ -91,7 +91,7 @@ public class MovieTest {
 			status = false;
 		if (!movie.getPoster().equals("poster"))
 			status = false;
-		if (!movie.getRuntime().equals("30min"))
+		if (!movie.getRuntime().equals("30"))
 			status = false;
 		if (!movie.getTitle().equals("test movie"))
 			status = false;
@@ -113,7 +113,7 @@ public class MovieTest {
 		movie.setActors("actors");
 		movie.setDirector("director");
 		movie.setPoster("poster");
-		movie.setRuntime("30min");
+		movie.setRuntime("30");
 		movie.setYear(2015);
 		movie.setDefaultprice(1.5d);
 
@@ -153,7 +153,7 @@ public class MovieTest {
 		movie.setActors("actors");
 		movie.setDirector("director");
 		movie.setPoster("poster");
-		movie.setRuntime("30min");
+		movie.setRuntime("30");
 		movie.setYear(2015);
 		movie.setDefaultprice(1.5d);
 

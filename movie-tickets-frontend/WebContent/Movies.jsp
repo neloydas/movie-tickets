@@ -1,9 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     
-<%@ page import="com.movietickets.RestClient"%>
-<%@ page import="com.movietickets.model.Movie"%>
-<%@ page import="com.movietickets.model.Schedule"%>
+<%@ page import="com.mtweb.RestClient"%>
+<%@ page import="com.mtweb.model.Movie"%>
+<%@ page import="com.mtweb.model.Schedule"%>
 <%@ page import="java.util.TimeZone"%>
 <%@ page import="java.text.SimpleDateFormat"%>
 <%@ page import="java.util.Date"%>
@@ -82,7 +82,7 @@ button {
 				SimpleDateFormat sdf = new SimpleDateFormat("dd/MM-HH:mm");
 				sdf.setTimeZone(TimeZone.getDefault());
 				String formattedDate = sdf.format(date);
-				out.println("<form action=\"/TestWebApp/choice\" method=\"post\">");
+				out.println("<form action=\"/movietickets/choice\" method=\"post\">");
 				out.println("<input type=\"hidden\" name=\"time\" value=\"" + e.getMoviedate() + "\"/>");
 				out.println("<input type=\"hidden\" name=\"movie\" value=\"" + e.getTitle() + "\" />");
 				out.println("<button type=\"submit\" class=\"btn btn-link\">" + formattedDate + "</button>");

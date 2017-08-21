@@ -1,4 +1,4 @@
-package com.movietickets.servlet;
+package com.mtweb.servlet;
 
 import java.io.IOException;
 
@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.movietickets.RestClient;
+import com.mtweb.RestClient;
 
 
 /**
@@ -29,7 +29,7 @@ public class SeatMap extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		response.sendRedirect("/TestWebApp/Movies.jsp");
+		response.sendRedirect("/movietickets/Movies.jsp");
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)

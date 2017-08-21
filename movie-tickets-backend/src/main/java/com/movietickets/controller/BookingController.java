@@ -23,6 +23,7 @@ public class BookingController {
 	// FIXME Need to figure out how to pass data from webpage to webservice
 	// call...POST??
 
+	
 	@PUT
 	@Path("/book")
 	@Produces(MediaType.TEXT_PLAIN)

@@ -1,4 +1,4 @@
-package com.movietickets.servlet;
+package com.mtweb.servlet;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -24,7 +24,7 @@ public class MovieSelect extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		response.sendRedirect("/TestWebApp/Movies.jsp");
+		response.sendRedirect("/movietickets/Movies.jsp");
 	}
 
 

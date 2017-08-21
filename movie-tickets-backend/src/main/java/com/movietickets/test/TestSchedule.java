@@ -118,13 +118,13 @@ public class TestSchedule {
 		
 		schedule.setTitle("qwerty");
 		schedule.setTicketprice(2.9d);
-		schedule.setFreeseats(1234);
+		schedule.setFreeseats(12);
 		schedule.setImdbid("1");
 		schedule.setMoviedate("2000");
 		
 		status = schedul.updateSchedule(schedule);
 		
-		assertEquals("Couldn't update choosen schedule", true, status);
+		assertEquals("Couldn't update chosen schedule", true, status);
 	}
 	
 	//fill up DB with test data
